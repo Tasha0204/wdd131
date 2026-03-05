@@ -55,6 +55,9 @@ main h1 {
     font-size: 2.5rem;
     margin: 20px 0;
 }
+main h1, main h2 {
+    text-align: center;
+}
 
 .grid-container {
     display: grid; 
@@ -84,11 +87,20 @@ main h1 {
     font-size: 1.2rem;
 }
 .card h3 {
+    display: flex;
+    align-items: center;
     text-align: center;
-    margin-top: 20px;
-    width: 100%; 
+    margin: 2rem 0 1rem 0;
+    font-size: 1.1rem;
+    clear: both; /
 }
 
+.card h3::before, .card h3::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #ccc;
+    margin: 0 15px;
+}
 .card-content {
     padding: 15px;
 }
