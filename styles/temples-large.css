@@ -6,10 +6,13 @@
         justify-content: space-between;
         font-size: 1.5rem;
     }
-
+    nav {
+        display: flex;
+    }
     .navigation {
         justify-content: flex-end;
         flex-direction: row;
+        display: flex;
 
     }
 
