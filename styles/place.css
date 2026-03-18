@@ -1,3 +1,12 @@
+:root {
+    --primary-green: #2e7d32;
+    --dark-grey: #343a40;
+    --light-grey: #dee2e6;
+    --body-bg: #f4f4f4;
+    --text-main: #333333;
+    --card-bg: rgba(220, 233, 247, 0.85);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,13 +15,13 @@
 
 body {
     font-family: "Poppins", sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f4f4f4; 
     color: #333333;
     line-height: 1.6;
 }
 
 header, footer {
-    background-color: #343a40;
+    background-color: #343a40; 
     color: #dee2e6;
     padding: 20px;
     text-align: center;
@@ -27,22 +36,22 @@ header, footer {
     margin: 0 auto;
 }
 
-.hero-section img {
+.hero img {
     width: 100%;
     height: auto;
     display: block;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .data, .weather {
     background-color: rgba(220, 233, 247, 0.85);
     border-radius: 10px;
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.15); 
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
     padding-bottom: 15px;
 }
 
 .label-box {
-    background-color: #2e7d32;
+    background-color: #2e7d32; 
     color: #ffffff;
     padding: 12px 15px;
     font-size: 1.3rem;
