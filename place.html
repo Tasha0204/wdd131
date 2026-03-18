@@ -3,56 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peru - Place Page</title>
-    <meta name="description" content="Assignment for WDD 230: Place page for Peru.">
+    <title>Perú - Página de lugar</title>
+    <meta name="description" content="Página de información sobre Lima, Perú para el curso WDD 230. Incluye datos geográficos, clima actual y cálculo de sensación térmica.">
     <meta name="author" content="Tasha Vidal">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="styles/place.css">
     <link rel="stylesheet" href="styles/place-large.css" media="(min-width: 1000px)">
     <script src="scripts/place.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Lima -Peru</h1>
+        <h1>Lima - Perú</h1>
     </header>
     <main class="container">
         <div class="hero-section">
             <picture class="hero">
                 <source media="(min-width: 1000px)" srcset="images/limaclima.webp">
                 <source media="(min-width: 620px)" srcset="images/limaclima.webp">
-                <img src="images/limaclima.webp" alt="Landscape of Lima, Peru" loading="lazy">
+                <img src="images/limaclima.webp" alt="Paisaje de Lima, Perú" loading="lazy">
             </picture>
         </div>
 
         <section class="data">
-            <h2 class="label-box">Data</h2>
+            <h2 class="label-box">Datos Generales</h2>
             <table>
-                <tr><td class="label"><b>Area:</b></td><td>1,285,216 km²</td></tr>
-                <tr><td class="label"><b>Population:</b></td><td>33,726,000</td></tr>
-                <tr><td class="label"><b>Capital:</b></td><td>Lima</td></tr>
-                <tr><td class="label"><b>Languages:</b></td><td>Spanish</td></tr>
-                <tr><td class="label"><b>Currency:</b></td><td>Sol (PEN)</td></tr>
-                <tr><td class="label"><b>Time Zone:</b></td><td>PET (UTC-5)</td></tr>
-                <tr><td class="label"><b>Calling Code:</b></td><td>+51</td></tr>
-                <tr><td class="label"><b>Internet TLD:</b></td><td>.pe</td></tr>
+                 <tr><td class="label">Area:</td><td>2,672 km²</td></tr>
+                 <tr><td class="label">Population:</td><td>10.2 Million</td></tr>
+                 <tr><td class="label">Capital:</td><td>Lima</td></tr>
+                 <tr><td class="label">Languages:</td><td>Spanish</td></tr>
+                 <tr><td class="label">Currency:</td><td>Sol (PEN)</td></tr>
+                 <tr><td class="label">Time Zone:</td><td>PET (UTC-5)</td></tr>
+                 <tr><td class="label">Calling Code:</td><td>+51 1</td></tr>
+                 <tr><td class="label">Internet TLD:</td><td>.pe</td></tr>
             </table>
         </section>
 
         <section class="weather">
-            <h2 class="label-box">Weather <span class="weather-icon"></span></h2>
-            <img src="images/weather-icon.svg" alt="Weather icon" class="weather-svg">
+            <h2 class="label-box">Clima <span class="weather-icon"></span></h2>
+            <img src="images/icono-del-clima.svg" alt="Icono del tiempo" class="weather-svg">
             <table>
-                <tr><td class="label"><b>Temperature:</b></td><td><span id="temp">10</span> °C</td></tr>
-                <tr><td class="label"><b>Conditions:</b></td><td>Cloudy</td></tr>
-                <tr><td class="label"><b>Wind:</b></td><td><span id="wind">5</span> km/h</td></tr>
-                <tr><td class="label"><b>Wind Chill:</b></td><td><span id="windchill"></span></td></tr>
+                <tr><td class="label">Temperature:</td><td><span id="temp">19</span> °C</td></tr>
+                <tr><td class="label">Conditions:</td><td>Mist / Humidity</td></tr>
+                <tr><td class="label">Wind:</td><td><span id="wind">14</span> km/h</td></tr>
+                <tr><td class="label">Wind Chill:</td><td><span id="windchill"></span></td></tr>
             </table>
         </section>
     </main>
     <footer>
-        <p>&copy;<span id="currentyear"></span> 🌸 Tasha Vidal 🌸 Lima, Perú </p>
+        <p>&copy;<span id="currentyear"></span> 🌸 Tasha Vidal 🌸 Lima, Perú</p>
         <p id="lastModified"></p>
     </footer>
 </body>

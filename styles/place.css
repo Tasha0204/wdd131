@@ -6,6 +6,7 @@
     --peru-green: #2e7d32; 
     --alice-blue: rgba(220, 233, 247, 0.85); 
     --poppins: "Poppins", sans-serif;
+    --text-main: #333333;
 }
 
 * {
@@ -17,7 +18,7 @@
 body {
     font-family: var(--poppins);
     background-color: #f4f4f4;
-    color: #333;
+    color: var(--text-main);
     line-height: 1.6;
 }
 
@@ -26,10 +27,6 @@ header, footer {
     color: var(--platinum);
     padding: 20px;
     text-align: center;
-}
-
-header h1 {
-    font-size: 2rem;
 }
 
 
@@ -42,11 +39,6 @@ header h1 {
     margin: 0 auto;
 }
 
-
-.hero-section {
-    width: 100%;
-}
-
 .hero img {
     width: 100%;
     height: auto;
@@ -54,33 +46,31 @@ header h1 {
     box-shadow: 0 4px 10px rgba(0,0,0,0.3); 
 }
 
-/* 6. CAJAS DE DATOS Y CLIMA (SOMBREADAS) */
 .data, .weather {
     background-color: var(--alice-blue);
     border-radius: 10px;
     box-shadow: 5px 5px 15px rgba(0,0,0,0.15); 
-    overflow: hidden; 
-    
+    padding-bottom: 15px;
 }
 
 .label-box {
     background-color: var(--peru-green);
     color: white;
     padding: 12px 15px;
-    margin: 0;
     font-size: 1.3rem;
     text-align: left;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 10px 0;
+    margin-top: 10px;
 }
 
 td {
     padding: 8px 15px;
-    font-size: 0.95rem;
 }
 
 .label {
@@ -89,20 +79,9 @@ td {
     width: 45%;
 }
 
-
 .weather-svg {
-    width: 50px;
+    width: 60px;
     height: auto;
     display: block;
-    margin: 15px auto;
-}
-
-footer p {
-    margin: 5px 0;
-    font-size: 0.9rem;
-}
-
-#lastModified {
-    color: #f1f1f1;
-    font-style: italic;
+    margin: 10px auto;
 }
