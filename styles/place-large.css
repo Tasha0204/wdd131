@@ -1,7 +1,7 @@
-
-   @media (min-width: 1000px) {.container {
+@media (min-width: 1000px) {
+    .container {
         position: relative;
-        display: block; 
+        display: block;
         padding: 0;
         max-width: 1200px;
         margin: 20px auto;
@@ -14,21 +14,19 @@
 
     .data, .weather {
         position: absolute;
-        background-color: rgba(220, 233, 247, 0.9);
-        padding: 0; 
+        background-color: rgba(220, 233, 247, 0.90);
+        padding: 0;
         border-radius: 10px;
         width: 280px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.5); 
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
         z-index: 10;
-        overflow: hidden; 
+        overflow: hidden;
     }
 
-   
     .data {
         top: 30px;
         left: 30px;
     }
-
 
     .weather {
         bottom: 30px;
@@ -36,16 +34,13 @@
     }
 
 
+
     .label-box {
-       
         padding: 10px 15px;
         font-size: 1.2rem;
-        
-    
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
     }
-
 
     .weather-svg {
         display: none;
