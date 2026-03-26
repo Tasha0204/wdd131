@@ -1,0 +1,19 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Columna centrada */
+}
+
+img {
+    display: block;
+    width: 400px;
+    height: 600px;
+    margin: 20px 0;
+    background-color: black; /* Fondo para el desvanecimiento */
+    animation: fadeIn 2s; /* Punto 10: Animación */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
