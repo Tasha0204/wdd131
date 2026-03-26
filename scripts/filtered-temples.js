@@ -179,8 +179,6 @@ document.addEventListener('DOMContentLoaded', () => {
     filterTemples('home-nav');
 });
 
-
-// Footer information
 document.addEventListener('DOMContentLoaded', () => {
     const currentYear = new Date().getFullYear();
     const lastModified = document.lastModified;
