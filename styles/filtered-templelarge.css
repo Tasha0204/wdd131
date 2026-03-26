@@ -8,11 +8,11 @@
     }
 
     #menu {
-        display: none; /* Escondemos el botón hamburguesa */
+        display: none; 
     }
 
     .navigation {
-        display: flex; /* Siempre visible en escritorio */
+        display: flex; 
         flex-direction: row;
         width: auto;
     }
@@ -27,6 +27,6 @@
     }
 
     .container {
-        grid-template-columns: repeat(3, 1fr); /* 3 columnas fijas en pantallas grandes */
+        grid-template-columns: repeat(3, 1fr); 
     }
 }

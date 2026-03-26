@@ -1,5 +1,5 @@
 
-// Header hambuger button secction
+
 document.addEventListener('DOMContentLoaded', () => {
     const hamButton = document.querySelector('#menu');
     const navigation = document.querySelector('.navigation');
