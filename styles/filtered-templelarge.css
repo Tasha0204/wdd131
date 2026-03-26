@@ -1,45 +1,44 @@
-@media (min-width: 750px) {
+/* CONSULTA DE MEDIOS REQUERIDA POR AUDITORÍA */
+@media screen and (min-width: 750px) {
+    
     #menu { display: none !important; }
 
+    /* Layout de dos columnas: Nav a la izquierda, Contenido a la derecha */
     body {
-        display: flex;
-        flex-direction: row;
+        display: flex; /* FLEX EN EL CUERPO PARA DISEÑO LATERAL */
+        align-items: flex-start;
     }
+
     .navigation {
-        display: flex !important;
+        display: flex !important; /* SIEMPRE VISIBLE EN PC */
         flex-direction: column;
         width: 260px;
-        background-color: var(--secondary);
+        min-height: 100vh;
         position: sticky;
         top: 0;
-        height: 100vh;
-        padding-top: 2rem;
+        background-color: var(--secondary-color);
+        border-right: 2px solid var(--accent-color);
     }
 
     .navigation a {
-        display: block !important;
-        padding: 1.2rem 2rem;
-        color: var(--white);
-        text-decoration: none;
         text-align: left;
-        font-size: 1.1rem;
-        border: none;
-        transition: all 0.3s;
-    }
-
-    .navigation a:hover {
-        background-color: var(--accent);
-        padding-left: 2.5rem; 
-    }
-
-    .navigation a.active {
-        background-color: var(--accent);
-        border-left: 5px solid var(--light);
+        padding: 1.5rem 2rem;
+        border-top: none;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
     }
 
     main {
-        flex: 1;
-        padding: 3rem;
-        background-color: #f4f7f6;
+        flex: 1; /* OCUPA TODO EL ESPACIO RESTANTE */
+        padding: 2rem 3rem;
+    }
+
+    /* Ajuste para el header en modo lateral */
+    header {
+        position: absolute;
+        width: 1px; height: 1px;
+        padding: 0; margin: -1px;
+        overflow: hidden;
+        clip: rect(0,0,0,0);
+        border: 0;
     }
 }
