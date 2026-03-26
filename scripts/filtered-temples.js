@@ -1,4 +1,3 @@
-
 // Header hambuger button secction
 document.addEventListener('DOMContentLoaded', () => {
     const hamButton = document.querySelector('#menu');
