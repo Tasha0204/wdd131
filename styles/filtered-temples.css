@@ -1,8 +1,8 @@
-
 :root {
-    --main-font: 'Poppins', sans-serif;
+    --main-font: Poppins, sans-serif;
     --transparent-black: rgba(0,0,0,0.1);
-    --primary-red: rgba(178, 34, 34, 0.9);
+    --primary-red: firebrick;
+    --accent-purple: blueviolet;
 }
 
 * {
@@ -15,60 +15,87 @@
 h1 {
     font-size: 2rem;
     text-align: left;
+    max-width: 100%;
     color: #fff;
-    background-color: var(--primary-red);
+    background-color: rgba(178, 34, 34, 0.9);
     padding-left: 20px;
 }
 
 h2 {
-    font-size: 2rem;
-    text-align: center; 
-    margin: 20px auto;  
-    width: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 10px auto;
+    max-width: 100%;
+    flex-wrap: wrap;
 }
 
+header {
+    color: black;
+    text-align: center;
+    font-size: 1rem;
+    margin: 0 auto;
+}
+
+/* --- Navigation & Menu --- */
 #menu {
     font-size: 1.5rem;
     border: 0;
     position: absolute;
     top: 2px;
     right: 15px;
-    color: firebrick;
+    color: var(--primary-red);
     background: none;
     cursor: pointer;
 }
 
 #menu::before { content: "☰"; }
-#menu.open::before { content: "⬅"; }
+#menu.open::before { content: "X"; }
 
 .navigation {
-    background-color: firebrick;
+    background-color: var(--primary-red);
+    color: #fff;
     display: flex;
     flex-direction: column;
-    list-style: none;
+    margin: 0 auto;
+    max-width: 100%;
 }
 
 .navigation a {
-    display: none; 
+    display: none; /* Hidden by default in mobile unless .open */
     color: #fff;
     text-decoration: none;
     text-align: center;
     font-size: 1.5rem;
-    padding: 10px;
+    margin: 10px auto;
 }
 
 .open a {
-    display: block; 
+    display: block;
+}
+
+.navigation li {
+    list-style: none;
+    margin: 0 50px;
+}
+
+/* --- Layout Elements --- */
+.flex-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 main {
     display: grid;
-    grid-template-columns: 1fr; 
-    gap: 10px;
-    padding: 10px;
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
 }
 
-main img {
+main > img {
     max-width: 100%;
     height: auto;
 }
@@ -76,7 +103,8 @@ main img {
 footer {
     background-color: rgba(0, 0, 0, 0.9);
     color: #fff;
+    margin: 0 auto;
     text-align: center;
-    padding: 1rem;
     font-size: 0.9em;
+    max-width: 100%;
 }

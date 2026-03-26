@@ -1,31 +1,49 @@
-@media (min-width: 750px) {
+
+@media only screen and (min-width: 1290px) {
+    
+    main {
+        display: flex; 
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .flex-wrapper {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
     #menu {
         display: none; 
     }
 
     .navigation {
-        flex-direction: row; 
-        justify-content: center;
+        flex-direction: row;
+        background-color: blueviolet; 
     }
 
     .navigation a {
-        display: block; 
+        display: inline-block;
         font-size: 1.1rem;
-        padding: 15px 25px;
+        margin: 0 15px;
     }
 
-    .navigation a:hover {
-        background-color: rgba(0, 0, 0, 0.2);
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
     }
 
-    main {
-        grid-template-columns: repeat(3, 1fr); 
-        max-width: 1200px;
-        margin: 20px auto;
+    .navigation li {
+        margin: 0 20px;
+        padding-bottom: 5px;
     }
 
-    h1 {
-        padding: 20px;
-        text-align: center;
+    /* Efectos Hover */
+    .navlinks li:hover {
+        background-color: rgba(60, 34, 178, 0.9);
+        transition: background-color 0.4s ease;
     }
 }
