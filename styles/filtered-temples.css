@@ -1,82 +1,174 @@
 
 :root {
-    --main-font: 'Poppins', sans-serif;
-    --transparent-black: rgba(0,0,0,0.1);
-    --primary-red: rgba(178, 34, 34, 0.9);
+    --primary-color-Rich-black: #0D1B2A;
+    --secondary-color-Oxford-Blue: #1B263B;
+    --accent1-color-YInMn-Blue: #415A77;
+    --accent2-color-SilverLake-Blue: #778DA9;
+    --accent3-color-Platinum: #E0E1DD;
+    --poppins-regular: "Poppins", sans-serif;
+    --poppins-regular-weight: 400;
+    --poppins-thin: "Poppins", sans-serif;
+    --poppins-thin-weight: 100;
+    --headline-color-on-white: var(--primary-color-Rich-black);
+    --headline-color-on-color: var(--accent3-color-Platinum);
+    --paragraph-color-on-white: var(--primary-color-Rich-black);
+    --paragraph-color-on-color: var(--accent3-color);
+    --paragraph-background-color: var(--secondary-color-Oxford-Blue);
+    --nav-link-color: var(--accent3-color-Platinum);
+    --nav-background-color: var(--secondary-color-Oxford-Blue);
+    --nav-hover-link-color: var(--accent2-color-SilverLake-Blue);
+    --nav-hover-background-color: var(--primary-color-Rich-black);
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: var(--main-font);
 }
 
-h1 {
-    font-size: 2rem;
-    text-align: left;
-    color: #fff;
-    background-color: var(--primary-red);
-    padding-left: 20px;
+body {
+    font-family: var(--poppins-regular);
+    font-weight: var(--poppins-regular-weight);
 }
 
-h2 {
-    font-size: 2rem;
-    text-align: center; 
-    margin: 20px auto;  
-    width: 100%;
+
+
+header {
+    background-color: var(--nav-background-color);
+    padding: 10px;
+    color: var(--headline-color-on-color);
+}
+
+header h1 {
+    width: 190px;
+    margin: auto 5px;
+    font-size: 20px;
 }
 
 #menu {
-    font-size: 1.5rem;
+    font-size: 2rem;
     border: 0;
+    background-color: var(--nav-background-color);
+    color: var(--accent1-color);
     position: absolute;
-    top: 2px;
-    right: 15px;
-    color: firebrick;
-    background: none;
-    cursor: pointer;
+    top: 0.5rem;
+    right: 1rem;
 }
 
-#menu::before { content: "☰"; }
-#menu.open::before { content: "⬅"; }
+#menu::before {
+    content: "≡";
+}
+
+#menu.open::before {
+    content: "❎";
+}
 
 .navigation {
-    background-color: firebrick;
     display: flex;
     flex-direction: column;
     list-style: none;
+    width: 100%;
 }
 
 .navigation a {
-    display: none; 
-    color: #fff;
-    text-decoration: none;
+    display: none;
+    padding: 1rem;
     text-align: center;
-    font-size: 1.5rem;
-    padding: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--nav-link-color);
+
+}
+
+.navigation a:hover {
+    color: var(--accent3-color-Platinum);
+    text-decoration: underline 2px solid var(--accent3-color-Platinum);
+    transition: all 5ms ease-in-out;
 }
 
 .open a {
-    display: block; 
+    display: block;
 }
+
+.hidden {
+    display: none;
+}
+
+
 
 main {
-    display: grid;
-    grid-template-columns: 1fr; 
-    gap: 10px;
-    padding: 10px;
+    margin: 1rem auto;
+    max-width: 730px;
 }
 
-main img {
-    max-width: 100%;
+.home {
+    border-bottom: 1px solid var(--headline-color-on-white);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.title {
+    margin-bottom: 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    grid-gap: 20px;
+    place-items: center;
+    margin: 5px 20px;
+}
+
+
+
+.temple-card {
+    max-width: 300px;
+    height: 350px;
+    background-color: var(--accent3-color-Platinum);
+}
+
+.temple-card {
+    border: 1px solid #778DA9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #0d1b2ac2;
+    margin-bottom: 30px;
+}
+
+.temple-card img {
+    width: 100%;
+    border-radius: 5px;
     height: auto;
 }
 
+.temple-info {
+    margin-top: 10px;
+}
+
+.temple-info h2 {
+    font-size: 16px;
+    color: var(--secondary-color-Oxford-Blue);
+}
+
+.temple-info p {
+    font-size: 12px;
+    color: var(--accent1-color-YInMn-Blue);
+    padding: 5px;
+}
+
+.temple-info strong {
+    color: var(--headline-color-on-white);
+}
+
+
+
 footer {
-    background-color: rgba(0, 0, 0, 0.9);
-    color: #fff;
+    background-color: var(--nav-background-color);
+    color: var(--headline-color-on-color);
     text-align: center;
     padding: 1rem;
-    font-size: 0.9em;
+}
+
+footer p {
+    font-size: 16px;
 }
