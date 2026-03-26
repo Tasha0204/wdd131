@@ -1,23 +1,17 @@
-
 :root {
-    --primary-color-Rich-black: #0D1B2A;
-    --secondary-color-Oxford-Blue: #1B263B;
-    --accent1-color-YInMn-Blue: #415A77;
-    --accent2-color-SilverLake-Blue: #778DA9;
-    --accent3-color-Platinum: #E0E1DD;
-    --poppins-regular: "Poppins", sans-serif;
-    --poppins-regular-weight: 400;
-    --poppins-thin: "Poppins", sans-serif;
-    --poppins-thin-weight: 100;
+
     --headline-color-on-white: var(--primary-color-Rich-black);
     --headline-color-on-color: var(--accent3-color-Platinum);
     --paragraph-color-on-white: var(--primary-color-Rich-black);
-    --paragraph-color-on-color: var(--accent3-color);
+    --paragraph-color-on-color: var(--accent3-color-Platinum);
+    
     --paragraph-background-color: var(--secondary-color-Oxford-Blue);
     --nav-link-color: var(--accent3-color-Platinum);
     --nav-background-color: var(--secondary-color-Oxford-Blue);
     --nav-hover-link-color: var(--accent2-color-SilverLake-Blue);
     --nav-hover-background-color: var(--primary-color-Rich-black);
+    --heading-font: var(--poppins-regular);
+    --paragraph-font: var(--poppins-regular);
 }
 
 * {
@@ -31,43 +25,60 @@ body {
     font-weight: var(--poppins-regular-weight);
 }
 
+h1, h2 {
+    font-family: var(--heading-font);
+    margin: 0;
+    padding: 0;
+}
 
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+
+p {
+    font-family: var(--paragraph-font);
+    color: var(--paragraph-color-on-white); /* Aplicamos el color definido */
+    margin: 0;
+    padding: 0;
+}
 
 header {
     background-color: var(--nav-background-color);
     padding: 10px;
     color: var(--headline-color-on-color);
+    position: relative; /* Importante para el posicionamiento de #menu */
 }
 
 header h1 {
-    width: 190px;
     margin: auto 5px;
-    font-size: 20px;
 }
 
 #menu {
     font-size: 2rem;
     border: 0;
-    background-color: var(--nav-background-color);
-    color: var(--accent1-color);
+    background-color: transparent; 
+    
+    /* CORRECCIÓN: Se usó el nombre completo de la variable */
+    color: var(--accent1-color-YInMn-Blue); 
+    
     position: absolute;
-    top: 0.5rem;
+    top: 0.5rem; /* Ajustado para que no choque con el borde */
     right: 1rem;
+    cursor: pointer;
 }
 
-#menu::before {
-    content: "≡";
-}
+#menu::before { content: "≡"; }
+#menu.open::before { content: "❎"; }
 
-#menu.open::before {
-    content: "❎";
+nav {
+    display: flex;
+    flex-direction: column;
 }
 
 .navigation {
     display: flex;
     flex-direction: column;
     list-style: none;
-    width: 100%;
+    padding: 0;
 }
 
 .navigation a {
@@ -75,27 +86,24 @@ header h1 {
     padding: 1rem;
     text-align: center;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1rem;
     color: var(--nav-link-color);
-
 }
 
 .navigation a:hover {
     color: var(--accent3-color-Platinum);
     text-decoration: underline 2px solid var(--accent3-color-Platinum);
-    transition: all 5ms ease-in-out;
+    /* CORRECCIÓN: 5ms es muy rápido, 300ms es más suave */
+    transition: all 300ms ease-in-out; 
 }
 
-.open a {
+/* Selector corregido para mostrar el menú */
+.navigation.open a {
     display: block;
+    font-size: 1.5rem;
 }
 
-.hidden {
-    display: none;
-}
-
-
-/* main */
+.hidden { display: none; }
 
 main {
     margin: 1rem auto;
@@ -103,74 +111,29 @@ main {
 }
 
 .home {
-    border-bottom: 1px solid var(--headline-color-on-white);
+    border-bottom: 1px solid #777;
     margin-bottom: 1rem;
     text-align: center;
 }
 
-.title {
-    margin-bottom: 20px;
-}
-
 .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 25px;
     place-items: center;
     margin: 5px 20px;
 }
 
-
-
-.temple-card {
-    max-width: 300px;
-    height: 350px;
-    background-color: var(--accent3-color-Platinum);
-}
-
-.temple-card {
-    border: 1px solid #778DA9;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px #0d1b2ac2;
-    margin-bottom: 30px;
-}
-
-.temple-card img {
+img {
     width: 100%;
-    border-radius: 5px;
     height: auto;
+    display: block;
 }
-
-.temple-info {
-    margin-top: 10px;
-}
-
-.temple-info h2 {
-    font-size: 16px;
-    color: var(--secondary-color-Oxford-Blue);
-}
-
-.temple-info p {
-    font-size: 12px;
-    color: var(--accent1-color-YInMn-Blue);
-    padding: 5px;
-}
-
-.temple-info strong {
-    color: var(--headline-color-on-white);
-}
-
-
-/* Footer */
 
 footer {
     background-color: var(--nav-background-color);
     color: var(--headline-color-on-color);
     text-align: center;
     padding: 1rem;
-}
-
-footer p {
-    font-size: 16px;
+    margin-top: 2rem;
 }
