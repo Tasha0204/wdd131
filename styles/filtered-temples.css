@@ -1,5 +1,4 @@
 :root {
-
     /* change the values below to your colors from your palette */
     --primary-color-Rich-black: #0D1B2A;
     --secondary-color-Oxford-Blue: #1B263B;
@@ -15,20 +14,21 @@
 
     /* these colors below should be chosen from among your palette colors above */
     --headline-color-on-white: var(--primary-color-Rich-black);
-    /* headlines on a white background */
     --headline-color-on-color: var(--accent3-color-Platinum);
-    /* headlines on a colored background */
     --paragraph-color-on-white: var(--primary-color-Rich-black);
-    /* paragraph text on a white background */
-    --paragraph-color-on-color: var(--accent3-color);
-    /* paragraph text on a colored background */
+    
+    /* CORRECCIÓN: Se completó el nombre de la variable accent3 */
+    --paragraph-color-on-color: var(--accent3-color-Platinum); 
+    
     --paragraph-background-color: var(--secondary-color-Oxford-Blue);
     --nav-link-color: var(--accent3-color-Platinum);
     --nav-background-color: var(--secondary-color-Oxford-Blue);
     --nav-hover-link-color: var(--accent2-color-SilverLake-Blue);
     --nav-hover-background-color: var(--primary-color-Rich-black);
+    
+    /* Nueva variable para la sombra (shadow) para evitar usar HEX directo abajo */
+    --shadow-color: #0d1b2ac2;
 }
-
 
 /* general */
 * {
@@ -41,7 +41,6 @@ body {
     font-family: var(--poppins-regular);
     font-weight: var(--poppins-regular-weight);
 }
-
 
 /* mobile **************************/
 
@@ -61,7 +60,8 @@ header h1 {
     font-size: 2rem;
     border: 0;
     background-color: var(--nav-background-color);
-    color: var(--accent1-color);
+    /* CORRECCIÓN: Se usó el nombre completo de la variable accent1 */
+    color: var(--accent1-color-YInMn-Blue); 
     position: absolute;
     top: 0.5rem;
     right: 1rem;
@@ -75,7 +75,7 @@ header h1 {
     content: "❎";
 }
 
-.navigation {
+nav ul, .navigation {
     display: flex;
     flex-direction: column;
     list-style: none;
@@ -89,7 +89,6 @@ header h1 {
     text-decoration: none;
     font-size: 16px;
     color: var(--nav-link-color);
-
 }
 
 .navigation a:hover {
@@ -105,7 +104,6 @@ header h1 {
 .hidden {
     display: none;
 }
-
 
 /* main */
 
@@ -132,19 +130,16 @@ main {
     margin: 5px 20px;
 }
 
-
-
 .temple-card {
     max-width: 300px;
     height: 350px;
     background-color: var(--accent3-color-Platinum);
-}
-
-.temple-card {
-    border: 1px solid #778DA9;
+    /* CORRECCIÓN: Se cambió el HEX por variable accent2 */
+    border: 1px solid var(--accent2-color-SilverLake-Blue);
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 2px 5px #0d1b2ac2;
+    /* CORRECCIÓN: Se cambió el HEX por la nueva variable de sombra */
+    box-shadow: 0 2px 5px var(--shadow-color);
     margin-bottom: 30px;
 }
 
@@ -172,7 +167,6 @@ main {
 .temple-info strong {
     color: var(--headline-color-on-white);
 }
-
 
 /* Footer */
 
