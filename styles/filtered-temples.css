@@ -1,110 +1,188 @@
 :root {
-    --main-font: Poppins, sans-serif;
-    --transparent-black: rgba(0,0,0,0.1);
-    --primary-red: firebrick;
-    --accent-purple: blueviolet;
+
+    /* change the values below to your colors from your palette */
+    --primary-color-Rich-black: #0D1B2A;
+    --secondary-color-Oxford-Blue: #1B263B;
+    --accent1-color-YInMn-Blue: #415A77;
+    --accent2-color-SilverLake-Blue: #778DA9;
+    --accent3-color-Platinum: #E0E1DD;
+
+    /* change the values below to your chosen font(s) */
+    --poppins-regular: "Poppins", sans-serif;
+    --poppins-regular-weight: 400;
+    --poppins-thin: "Poppins", sans-serif;
+    --poppins-thin-weight: 100;
+
+    /* these colors below should be chosen from among your palette colors above */
+    --headline-color-on-white: var(--primary-color-Rich-black);
+    /* headlines on a white background */
+    --headline-color-on-color: var(--accent3-color-Platinum);
+    /* headlines on a colored background */
+    --paragraph-color-on-white: var(--primary-color-Rich-black);
+    /* paragraph text on a white background */
+    --paragraph-color-on-color: var(--accent3-color);
+    /* paragraph text on a colored background */
+    --paragraph-background-color: var(--secondary-color-Oxford-Blue);
+    --nav-link-color: var(--accent3-color-Platinum);
+    --nav-background-color: var(--secondary-color-Oxford-Blue);
+    --nav-hover-link-color: var(--accent2-color-SilverLake-Blue);
+    --nav-hover-background-color: var(--primary-color-Rich-black);
 }
 
+
+/* general */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: var(--main-font);
 }
 
-h1 {
-    font-size: 2rem;
-    text-align: left;
-    max-width: 100%;
-    color: #fff;
-    background-color: rgba(178, 34, 34, 0.9);
-    padding-left: 20px;
+body {
+    font-family: var(--poppins-regular);
+    font-weight: var(--poppins-regular-weight);
 }
 
-h2 {
-    font-size: 1.5rem;
-    text-align: center;
-    margin: 10px auto;
-    max-width: 100%;
-    flex-wrap: wrap;
-}
+
+/* mobile **************************/
 
 header {
-    color: black;
-    text-align: center;
-    font-size: 1rem;
-    margin: 0 auto;
+    background-color: var(--nav-background-color);
+    padding: 10px;
+    color: var(--headline-color-on-color);
 }
 
-/* --- Navigation & Menu --- */
+header h1 {
+    width: 190px;
+    margin: auto 5px;
+    font-size: 20px;
+}
+
 #menu {
-    font-size: 1.5rem;
+    font-size: 2rem;
     border: 0;
+    background-color: var(--nav-background-color);
+    color: var(--accent1-color);
     position: absolute;
-    top: 2px;
-    right: 15px;
-    color: var(--primary-red);
-    background: none;
-    cursor: pointer;
+    top: 0.5rem;
+    right: 1rem;
 }
 
-#menu::before { content: "☰"; }
-#menu.open::before { content: "X"; }
+#menu::before {
+    content: "≡";
+}
+
+#menu.open::before {
+    content: "❎";
+}
 
 .navigation {
-    background-color: var(--primary-red);
-    color: #fff;
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
-    max-width: 100%;
+    list-style: none;
+    width: 100%;
 }
 
 .navigation a {
-    display: none; /* Hidden by default in mobile unless .open */
-    color: #fff;
-    text-decoration: none;
+    display: none;
+    padding: 1rem;
     text-align: center;
-    font-size: 1.5rem;
-    margin: 10px auto;
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--nav-link-color);
+
+}
+
+.navigation a:hover {
+    color: var(--accent3-color-Platinum);
+    text-decoration: underline 2px solid var(--accent3-color-Platinum);
+    transition: all 5ms ease-in-out;
 }
 
 .open a {
     display: block;
 }
 
-.navigation li {
-    list-style: none;
-    margin: 0 50px;
+.hidden {
+    display: none;
 }
 
-/* --- Layout Elements --- */
-.flex-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+
+/* main */
 
 main {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 5px;
-    margin-top: 10px;
-    align-items: center;
-    justify-content: center;
+    margin: 1rem auto;
+    max-width: 730px;
 }
 
-main > img {
-    max-width: 100%;
+.home {
+    border-bottom: 1px solid var(--headline-color-on-white);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.title {
+    margin-bottom: 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    grid-gap: 20px;
+    place-items: center;
+    margin: 5px 20px;
+}
+
+
+
+.temple-card {
+    max-width: 300px;
+    height: 350px;
+    background-color: var(--accent3-color-Platinum);
+}
+
+.temple-card {
+    border: 1px solid #778DA9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #0d1b2ac2;
+    margin-bottom: 30px;
+}
+
+.temple-card img {
+    width: 100%;
+    border-radius: 5px;
     height: auto;
 }
 
+.temple-info {
+    margin-top: 10px;
+}
+
+.temple-info h2 {
+    font-size: 16px;
+    color: var(--secondary-color-Oxford-Blue);
+}
+
+.temple-info p {
+    font-size: 12px;
+    color: var(--accent1-color-YInMn-Blue);
+    padding: 5px;
+}
+
+.temple-info strong {
+    color: var(--headline-color-on-white);
+}
+
+
+/* Footer */
+
 footer {
-    background-color: rgba(0, 0, 0, 0.9);
-    color: #fff;
-    margin: 0 auto;
+    background-color: var(--nav-background-color);
+    color: var(--headline-color-on-color);
     text-align: center;
-    font-size: 0.9em;
-    max-width: 100%;
+    padding: 1rem;
+}
+
+footer p {
+    font-size: 16px;
 }
