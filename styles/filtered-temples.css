@@ -1,132 +1,92 @@
 :root {
-    --primary-color-Rich-black: #0D1B2A;
-    --secondary-color-Oxford-Blue: #1B263B;
-    --accent1-color-YInMn-Blue: #415A77;
-    --accent2-color-SilverLake-Blue: #778DA9;
-    --accent3-color-Platinum: #E0E1DD;
-    --poppins-regular: "Poppins", sans-serif;
-    --nav-link-color: var(--accent3-color-Platinum);
+    --primary: #0D1B2A;
+    --secondary: #1B263B;
+    --accent: #415A77;
+    --light: #E0E1DD;
+    --white: #ffffff;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { 
+    font-family: 'Poppins', sans-serif; 
+    background-color: #f4f7f6; 
+    color: var(--primary);
+    line-height: 1.6;
 }
 
-body {
-    font-family: var(--poppins-regular);
-    background-color: #f0f0f0;
-    color: var(--primary-color-Rich-black);
-}
-
-/* Header para móvil */
 header {
-    background-color: var(--secondary-color-Oxford-Blue);
-    padding: 1rem;
-    color: white;
+    background-color: var(--secondary);
+    padding: 1.5rem;
+    color: var(--white);
+    box-shadow: var(--shadow);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
 }
 
-.nameHeader.hidden {
-    display: none; /* Esto lo usa tu JS al abrir el menú */
-}
-
-#menu {
-    font-size: 2rem;
-    border: 0;
-    background: none;
-    color: white;
-    cursor: pointer;
-}
-
-/* Iconos del menú hamburguesa */
+#menu { font-size: 2rem; border: 0; background: none; color: var(--white); cursor: pointer; }
 #menu::before { content: "☰"; }
-#menu.open::before { content: "❎"; }
+#menu.open::before { content: "✕"; }
 
-/* Navegación para móvil */
-.navigation {
-    display: none; /* Escondido por defecto */
-    flex-direction: column;
-    list-style: none;
-    background-color: var(--secondary-color-Oxford-Blue);
+.navigation { display: none; flex-direction: column; background-color: var(--secondary); }
+.navigation.open { display: flex; }
+.navigation a { 
+    padding: 1.2rem; 
+    color: var(--white); 
+    text-decoration: none; 
+    text-align: center; 
+    border-top: 1px solid rgba(255,255,255,0.05);
+    transition: 0.3s;
 }
 
-.navigation.open {
-    display: flex; /* Se muestra cuando el JS añade la clase .open */
+.navigation a.active { background-color: var(--accent); font-weight: 600; }
+
+main { padding: 2rem 1rem; max-width: 1200px; margin: 0 auto; }
+h2.title { 
+    text-align: center; 
+    margin-bottom: 2rem; 
+    color: var(--secondary);
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.navigation a {
-    padding: 1rem;
-    color: white;
-    text-decoration: none;
-    text-align: center;
-    border-top: 1px solid rgba(255,255,255,0.1);
-}
-
-.navigation a.active {
-    background-color: var(--accent1-color-YInMn-Blue);
-}
-
-/* Área principal */
-main {
-    padding: 1rem;
-}
-
-h2.title {
-    text-align: center;
-    margin: 1rem 0;
-    color: var(--secondary-color-Oxford-Blue);
-}
-
-/* Cuadrícula de Templos (Container) */
 .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
+    gap: 30px;
+    justify-content: center;
 }
 
-/* Tarjeta de Templo (Temple Card) */
+
 .temple-card {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    background-color: var(--white);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }
 
-.temple-card img {
-    width: 100%;
-    height: auto;
+.temple-card:hover { transform: translateY(-5px); }
+
+.temple-card img { 
+    width: 100%; 
+    height: 250px; 
+    object-fit: cover; 
     display: block;
-    object-fit: cover;
 }
 
-.temple-info {
-    padding: 1rem;
-}
+.temple-info { padding: 1.5rem; }
+.temple-info h2 { font-size: 1.3rem; margin-bottom: 0.8rem; color: var(--secondary); }
+.temple-info p { font-size: 0.95rem; margin-bottom: 0.4rem; color: #555; }
+.temple-info strong { color: var(--primary); }
 
-.temple-info h2 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    color: var(--secondary-color-Oxford-Blue);
-}
-
-.temple-info p {
-    font-size: 0.9rem;
-    margin: 5px 0;
-}
-
-/* Footer */
-footer {
-    background-color: var(--secondary-color-Oxford-Blue);
-    color: white;
-    text-align: center;
-    padding: 1.5rem;
-    margin-top: 2rem;
+footer { 
+    background-color: var(--secondary); 
+    color: var(--white); 
+    text-align: center; 
+    padding: 2rem; 
+    margin-top: 3rem;
 }
