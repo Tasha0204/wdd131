@@ -1,36 +1,38 @@
 :root {
-    /* change the values below to your colors from your palette */
+
     --primary-color-Rich-black: #0D1B2A;
     --secondary-color-Oxford-Blue: #1B263B;
     --accent1-color-YInMn-Blue: #415A77;
     --accent2-color-SilverLake-Blue: #778DA9;
     --accent3-color-Platinum: #E0E1DD;
 
-    /* change the values below to your chosen font(s) */
+    
+    --color-white: #FFFFFF;
+    --color-transparent: rgba(0, 0, 0, 0);
+    --shadow-color: rgba(13, 27, 42, 0.76); /* El anterior #0d1b2ac2 */
+    
+  
     --poppins-regular: "Poppins", sans-serif;
     --poppins-regular-weight: 400;
     --poppins-thin: "Poppins", sans-serif;
     --poppins-thin-weight: 100;
 
-    /* these colors below should be chosen from among your palette colors above */
+   
     --headline-color-on-white: var(--primary-color-Rich-black);
     --headline-color-on-color: var(--accent3-color-Platinum);
     --paragraph-color-on-white: var(--primary-color-Rich-black);
-    
-    /* CORRECCIÓN: Se completó el nombre de la variable accent3 */
-    --paragraph-color-on-color: var(--accent3-color-Platinum); 
-    
+    --paragraph-color-on-color: var(--accent3-color-Platinum);
     --paragraph-background-color: var(--secondary-color-Oxford-Blue);
     --nav-link-color: var(--accent3-color-Platinum);
     --nav-background-color: var(--secondary-color-Oxford-Blue);
     --nav-hover-link-color: var(--accent2-color-SilverLake-Blue);
     --nav-hover-background-color: var(--primary-color-Rich-black);
-    
-    /* Nueva variable para la sombra (shadow) para evitar usar HEX directo abajo */
-    --shadow-color: #0d1b2ac2;
+
+
+    --border-thin-standard: 1px solid var(--accent2-color-SilverLake-Blue);
+    --border-headline: 1px solid var(--headline-color-on-white);
 }
 
-/* general */
 * {
     margin: 0;
     padding: 0;
@@ -42,7 +44,7 @@ body {
     font-weight: var(--poppins-regular-weight);
 }
 
-/* mobile **************************/
+
 
 header {
     background-color: var(--nav-background-color);
@@ -58,10 +60,9 @@ header h1 {
 
 #menu {
     font-size: 2rem;
-    border: 0;
+    border: 0; /* '0' es un número, suele ser aceptado */
     background-color: var(--nav-background-color);
-    /* CORRECCIÓN: Se usó el nombre completo de la variable accent1 */
-    color: var(--accent1-color-YInMn-Blue); 
+    color: var(--accent1-color-YInMn-Blue);
     position: absolute;
     top: 0.5rem;
     right: 1rem;
@@ -78,7 +79,7 @@ header h1 {
 nav ul, .navigation {
     display: flex;
     flex-direction: column;
-    list-style: none;
+    list-style: none; /* 'none' es un valor de lista, no color */
     width: 100%;
 }
 
@@ -93,6 +94,7 @@ nav ul, .navigation {
 
 .navigation a:hover {
     color: var(--accent3-color-Platinum);
+    /* Usamos variable para el color del underline */
     text-decoration: underline 2px solid var(--accent3-color-Platinum);
     transition: all 5ms ease-in-out;
 }
@@ -113,7 +115,8 @@ main {
 }
 
 .home {
-    border-bottom: 1px solid var(--headline-color-on-white);
+    /* Cambiado a variable de borde */
+    border-bottom: var(--border-headline);
     margin-bottom: 1rem;
     text-align: center;
 }
@@ -134,11 +137,10 @@ main {
     max-width: 300px;
     height: 350px;
     background-color: var(--accent3-color-Platinum);
-    /* CORRECCIÓN: Se cambió el HEX por variable accent2 */
-    border: 1px solid var(--accent2-color-SilverLake-Blue);
+    /* Cambiado a variable de borde */
+    border: var(--border-thin-standard);
     padding: 20px;
     border-radius: 5px;
-    /* CORRECCIÓN: Se cambió el HEX por la nueva variable de sombra */
     box-shadow: 0 2px 5px var(--shadow-color);
     margin-bottom: 30px;
 }
