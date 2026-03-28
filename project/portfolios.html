@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Site Plan - Tasha Vidal</title>
-    <meta name="description" content="Site Plan For: besys.tech - Web development projects by Tasha Vidal">
+    <title>Portfolios Page</title>
+    <meta name="description" content="Portfolios page: Website projects created by Tasha Vidal">
     <meta name="author" content="Tasha Vidal">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,7 +31,7 @@
                     <li><a href="index.html" id="home">Home</a></li>
                     <li><a href="about.html" id="about">About</a></li>
                     <li><a href="contact.html" id="contact">Contact</a></li>
-                    <li><a href="portfolios.html" id="portfolio">Portfolios</a></li>
+                    <li><a href="portfolios.html" id="portfolio" class="active">Portfolios</a></li>
                     <li><a href="../form.html" id="product">Products</a></li>
                 </ul>
                 <button id="menu" aria-label="menu"></button>
@@ -42,42 +42,49 @@
         <main>
             <div class="hero">
                 <div class="image-container">
-                    <h1>My Site Plan</h1>
+                    <h1>My Latest Work</h1>
                     <img src="images/site-planning.svg" alt="picture of a notebook with wireframe sketches" width="200"
                         height="100">
                 </div>
             </div>
 
             <div class="bottom-section">
-                <p class="title">Site Name: besys.tech</p>
-                <p class="desc">This name represents my startup tech company focused on creating
-                    beautiful and useful websites for the community.</p>
-
-                <p class="title">Site Purpose:</p>
-                <p class="desc">This site aims to provide visitors with website ideas through the many
-                    projects and portfolios created by me, allowing them to leverage these concepts for their own business websites.</p>
-                
-                <p class="title">Scenarios</p>
-                <ul>
-                    <li>What kind of websites will customers want to build for their own small businesses?</li>
-                    <li>Where can I find contact information for the web developer for a freelancing job?</li>
-                </ul>
-
-                <p class="title">Color Scheme:</p>
-                <p class="desc">I will use carmine: <span id="color1">#931621ff</span> and dark-slate-gray: <span
-                        id="color2">#28464bff</span> as my primary and secondary colors.</p>
-                
-                <p class="title">Typography:</p>
-                <p class="desc">I will use Roboto, Arial, sans-serif and Poppins, sans-serif as my primary and secondary
-                    fonts.</p>
-                
-                <p class="title">Wireframes:</p>
-                <div class="wireframe">
-                    <ul>
-                        <li><a href="desktop-layout.html">Desktop Layout</a></li>
-                        <li><a href="mobile-layout.html">Mobile Layout</a></li>
-                    </ul>
+                <h2 id="choose">Choose a website portfolio</h2>
+                <div class="dropdown-container">
+                    <select id="my-portfolios">
+                        <option value="">Select a portfolio</option>
+                        <option value="Place page">Portfolio 1</option>
+                        <option value="WDD131 home page">Portfolio 2</option>
+                        <option value="Filtered temples page">Portfolio 3</option>
+                        <option value="Unfiltered temples page">Portfolio 4</option>
+                        <option value="Holy grail layout (practice)">Portfolio 5</option>
+                        <option value="Whitewater rafting site (WDD130)">Portfolio 6</option>
+                    </select>
+                    <button id="portfolio-btn">Select</button>
                 </div>
+
+                <div id="results"></div>
+                <div class="image-loader"></div>
+
+                <div class="portfolio-container">
+                    <div class="portfolio-items">
+                        <div class="titlediv">
+                            <h3 class="project-title">Portfolio 1: Place page </h3>
+                        </div>
+                        <div class="picturediv">
+                            <a href="https://jamesphillipdeguzman.github.io/wdd131/place.html">
+                                <img src="images/project-images/portfolio-1.webp" alt="Portfolio 1: place.html"
+                                    width="300" height="200" loading="eager">
+                            </a>
+                        </div>
+                        <div class="descdiv">
+                            <p class="project-desc">
+                                This website portfolio uses picture and srcset in order to load different picture sizes.
+                                The site is about my dream destination, Banaue Rice Terraces in the Philippines!
+                            </p>
+                        </div>
+                    </div>
+                    </div>
             </div>
         </main>
     </div>
@@ -95,6 +102,8 @@
                 &copy;<span id="currentyear"></span> Tasha Vidal <p class="lastmodified">Last Modified:
                     <span id="lastModified"></span>
                 </p>
+                <p>Search Count: <span id="search"></span></p>
+                <p> Date: <span id="today"></span></p>
             </div>
 
             <div class="social-links">
@@ -107,7 +116,6 @@
             </div>
         </div>
     </footer>
-
 </body>
 
 </html>
