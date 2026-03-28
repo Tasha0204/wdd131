@@ -5,16 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Site Plan - Tasha Vidal</title>
-    <meta name="description" content="Site Plan For: besys.tech - Web development projects by Tasha Vidal">
+    <meta name="description" content="Site Plan For: besys.tech - Technical requirements and design layout">
     <meta name="author" content="Tasha Vidal">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/base-large.css">
     <script src="scripts/base.js" defer></script>
@@ -25,7 +20,8 @@
     <div class="page-wrap">
         <header>
             <nav class="navigation">
-                <div class="logo"><img src="images/besys-tech-logo.svg" alt="company logo" width="100" height="100">
+                <div class="logo">
+                    <img src="images/besys-tech-logo.svg" alt="company logo" width="100" height="100">
                 </div>
                 <ul>
                     <li><a href="index.html" id="home">Home</a></li>
@@ -43,71 +39,89 @@
             <div class="hero">
                 <div class="image-container">
                     <h1>My Site Plan</h1>
-                    <img src="images/site-planning.svg" alt="picture of a notebook with wireframe sketches" width="200"
-                        height="100">
+                    <img src="images/site-planning.svg" alt="site planning illustration" width="200" height="100">
                 </div>
             </div>
 
             <div class="bottom-section">
-                <p class="title">Site Name: besys.tech</p>
-                <p class="desc">This name represents my startup tech company focused on creating
-                    beautiful and useful websites for the community.</p>
+                <section class="site-info">
+                    <p class="title">Site Name: besys.tech</p>
+                    <p class="desc">Startup tech company focused on beautiful and useful websites.</p>
 
-                <p class="title">Site Purpose:</p>
-                <p class="desc">This site aims to provide visitors with website ideas through the many
-                    projects and portfolios created by me, allowing them to leverage these concepts for their own business websites.</p>
-                
-                <p class="title">Scenarios</p>
-                <ul>
-                    <li>What kind of websites will customers want to build for their own small businesses?</li>
-                    <li>Where can I find contact information for the web developer for a freelancing job?</li>
-                </ul>
+                    <p class="title">Color Scheme:</p>
+                    <p class="desc">Carmine: <span id="color1">#931621</span> and Dark-Slate-Gray: <span id="color2">#28464B</span>.</p>
+                </section>
 
-                <p class="title">Color Scheme:</p>
-                <p class="desc">I will use carmine: <span id="color1">#931621ff</span> and dark-slate-gray: <span
-                        id="color2">#28464bff</span> as my primary and secondary colors.</p>
-                
-                <p class="title">Typography:</p>
-                <p class="desc">I will use Roboto, Arial, sans-serif and Poppins, sans-serif as my primary and secondary
-                    fonts.</p>
-                
-                <p class="title">Wireframes:</p>
-                <div class="wireframe">
-                    <ul>
-                        <li><a href="desktop-layout.html">Desktop Layout</a></li>
-                        <li><a href="mobile-layout.html">Mobile Layout</a></li>
-                    </ul>
-                </div>
+                <hr>
+
+                <section class="audit-form-section">
+                    <h2>Content Review Form</h2>
+                    <p>Please complete this technical review of the site plan.</p>
+
+                    <form action="review.html" method="get" class="site-plan-form">
+                        
+                        <div class="form-item">
+                            <label for="reviewer">Reviewer Name:</label>
+                            <input type="text" id="reviewer" name="reviewer" required>
+                        </div>
+
+                        <div class="form-item">
+                            <label for="rating">Site Design Rating:</label>
+                            <select id="rating" name="rating" required>
+                                <option value="" disabled selected>Please select a rating...</option>
+                                <option value="poor">Poor</option>
+                                <option value="good">Good</option>
+                                <option value="excellent">Excellent</option>
+                            </select>
+                        </div>
+
+                        <div class="form-item">
+                            <p>How clear is the site purpose?</p>
+                            <label><input type="radio" name="clarity" value="1"> 1</label>
+                            <label><input type="radio" name="clarity" value="2"> 2</label>
+                            <label><input type="radio" name="clarity" value="3"> 3</label>
+                            <label><input type="radio" name="clarity" value="4"> 4</label>
+                            <label><input type="radio" name="clarity" value="5"> 5</label>
+                        </div>
+
+                        <div class="form-item">
+                            <label for="review-date">Review Date:</label>
+                            <input type="date" id="review-date" name="review-date" required>
+                        </div>
+
+                        <div class="form-item">
+                            <p>Which pages are planned?</p>
+                            <label><input type="checkbox" name="pages" value="home"> Home</label>
+                            <label><input type="checkbox" name="pages" value="about"> About</label>
+                            <label><input type="checkbox" name="pages" value="contact"> Contact</label>
+                            <label><input type="checkbox" name="pages" value="portfolio"> Portfolios</label>
+                        </div>
+
+                        <div class="form-item">
+                            <label for="comments">Additional Comments:</label>
+                            <textarea id="comments" name="comments" rows="4"></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Submit Review</button>
+
+                    </form>
+                </section>
             </div>
         </main>
     </div>
-    <div class="wireframe-overlay"></div>
 
     <footer>
         <div class="footer-wrapper">
-            <div class="footer-links">
-                <a href="siteplan.html">
-                    <img src="images/svg/site-plan-logo.svg" alt="site plan logo" width="50" height="50">
-                </a>
-            </div>
-
             <div class="footer-text">
-                &copy;<span id="currentyear"></span> Tasha Vidal <p class="lastmodified">Last Modified:
-                    <span id="lastModified"></span>
-                </p>
+                &copy;<span id="currentyear"></span> Tasha Vidal 
+                <p class="lastmodified">Last Modified: <span id="lastModified"></span></p>
             </div>
-
             <div class="social-links">
-                <a href="https://www.facebook.com/tashavidal" target="_blank">
-                    <img src="images/svg/fb-logo.svg" alt="facebook logo" width="50" height="50">
-                </a>
-                <a href="https://www.linkedin.com/in/tashavidal/" target="_blank">
-                    <img src="images/svg/linkedin-logo.svg" alt="LinkedIn logo" width="50" height="50">
-                </a>
+                <a href="https://facebook.com/tashavidal" target="_blank"><img src="images/svg/fb-logo.svg" alt="FB" width="30"></a>
+                <a href="https://linkedin.com/in/tashavidal" target="_blank"><img src="images/svg/linkedin-logo.svg" alt="LI" width="30"></a>
             </div>
         </div>
     </footer>
 
 </body>
-
 </html>
