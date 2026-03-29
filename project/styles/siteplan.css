@@ -1,17 +1,16 @@
-/* CSS NIVEL POLLITO - DIRECTO Y SIN ERRORES */
 
 body {
     font-family: "Lato", sans-serif;
     display: grid;
     place-items: center;
-    background-color: #fefcfb; /* El blanco de A&S */
-    color: #0a1128;            /* El azul Oxford */
+    background-color: #fefcfb; 
+    color: #0a1128;            
     padding: 20px;
 }
 
 h2 {
-    color: #001f54;            /* El azul Penn */
-    border-bottom: 2px solid #1282a2; /* El azul Cerulean */
+    color: #001f54;           
+    border-bottom: 2px solid #1282a2; 
     width: 100%;
     margin-top: 30px;
 }
@@ -38,8 +37,8 @@ p {
 .headerEx, .footerEx {
     width: 300px;
     padding: 15px;
-    background-color: #001f54; /* Azul Penn */
-    color: #fefcfb;            /* Blanco */
+    background-color: #001f54; 
+    color: #fefcfb;            
     text-align: center;
     margin: 10px 0;
     border-radius: 5px;
@@ -49,7 +48,7 @@ p {
     width: 300px;
     padding: 15px;
     background-color: #fefcfb;
-    color: #034078;            /* Azul Indigo */
+    color: #034078;            
     text-align: center;
     border: 1px solid #034078;
     margin: 10px 0;
