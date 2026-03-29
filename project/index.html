@@ -3,94 +3,128 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Website Portfolio Homepage</title>
-    <meta name="description" content="Home page: Landing page for my web portfolio site">
-    <meta name="author" content="Tasha Vidal">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Demetrio Aris</title>
+    <meta name="description" content="Product Review Form">
+    <meta name="keywords" content="Product Review Form">
+    <meta name="author" content="Tasha vidal">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/base-large.css">
-    <script src="scripts/base.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../project/styles/style.css">
+    <link rel="stylesheet" href="../project/styles/style-large.css">
+    <link rel="stylesheet" href="../project/styles/home.css">
+
 </head>
 
 <body>
+    <header>
+        <img src="../project/images/logo-circle-web-Programming-modified.webp" alt="Logo Tasha Vidal" width="354"
+            height="354">
 
-    <div class="page-wrap">
-        <header>
-            <nav class="navigation">
-                <div class="logo"><img src="images/besys-tech-logo.svg" alt="company logo" width="100" height="100">
-                </div>
-                <ul>
-                    <li><a href="index.html" id="home" class="active">Home</a></li>
-                    <li><a href="about.html" id="about">About</a></li>
-                    <li><a href="contact.html" id="contact">Contact</a></li>
-                    <li><a href="portfolios.html" id="portfolio">Portfolios</a></li>
-                    <li><a href="../form.html" id="product">Products</a></li>
-                </ul>
-                <button id="menu" aria-label="menu"></button>
-            </nav>
-            <button class="signup-btn">Sign Up</button>
-        </header>
-
-        <main>
-            <div class="hero">
-                <div class="image-container">
-                    <h1 id="hero-text">T&N.tech</h1>
-                    <img src="images/besys-tech-logo.svg" alt="besys tech company" width="200" height="100">
-                </div>
+        <button id="menu"></button>
+        <nav class="navigation">
+            <a  href="../project/index.html">Home</a>
+            <a href="../project/projects.html">Projects</a>
+            <a href="../project/contact.html">Contact</a>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="intro-box">
+            <div class="image-container">
+                <picture class="intro-img">
+                    <source media="(min-width: 620px)" srcset="../project/images/into-back.jpg">
+                    <img src="../project/images/standard-quality-control-concept-m-mediun.jpg"
+                        alt="Background computer image by Freepik">
+                </picture>
             </div>
-
-            <div class="bottom-section">
-                <div class="profile">
-                    <img src="images/project-images/profile.png" alt="circle profile of besys tech" width="200"
-                        height="200">
-                </div>
-                <article class="my-company">
-                    <h2>besys.tech</h2>
-                    <p>I am a budding web developer and the founder of <span class="brand">besys tech</span>, a startup
-                        company focused on creating useful websites and apps for my community.</p>
-                </article>
-            </div>
-        </main>
-    </div>
-    <div class="wireframe-overlay"></div>
-
-    <footer>
-        <div class="footer-wrapper">
-            <div class="footer-links">
-                <a href="siteplan.html">
-                    <img src="images/svg/site-plan-logo.svg" alt="site plan logo" width="50" height="50">
-                </a>
-            </div>
-
-            <div class="footer-text">
-                &copy;<span id="currentyear"></span> Tasha Vidal<p class="lastmodified">Last Modified:
-                    <span id="lastModified"></span>
+            <div class="intro-msg">
+                <h2>Aspiring Web Developer</h2>
+                <h1>Demetrio Aris</h1>
+                <p>
+                    I invite you to explore my projects and learn more about my
+                    experience throughout this webpage.
                 </p>
+                <div class="intro-social"></div>
+                <div class="button-contact">
+                    <a class="contact" href="../project/contact.html">Contact Us</a>
+                </div>
             </div>
 
-            <div class="social-links">
-                <a href="https://www.facebook.com/tashavidal" target="_blank">
-                    <img src="images/svg/fb-logo.svg" alt="facebook logo" width="50" height="50">
-                </a>
-                <a href="https://www.linkedin.com/in/tashavidal/" target="_blank">
-                    <img src="images/svg/linkedin-logo.svg" alt="LinkedIn logo" width="50" height="50">
-                </a>
+        </section>
+
+        <section class="personal-box">
+            <div class="about-myself"></div>
+            <div class="education"></div>
+            <div class="skills">
+                <h1>Tools of the Trade</h1>
+                <div class="tool-box">
+                    <div class="tools">
+                        <img class="tools-icon" src="../project/images/logos/html-logo-s.png" alt="HTML5 Logo" />
+                    </div>
+                    <div class="tools">
+                        <img class="tools-icon" src="../project/images/logos/css-logo-s.png" alt="CSS Logo" />
+                    </div>
+                    <div class="tools">
+                        <img class="tools-icon" src="../project/images/logos/javaScript-logo-s.png" alt="JavaScript Logo" />
+                    </div>
+                </div>
+                <div class="button-contact">
+                    <a class="contact" href="../project/projects.html">Projects</a>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="values-box">
+            <h2>My Core Values in Software Development</h2>
+            <div class="values">
+                <div class="value-item">
+                    <h2>Proactivity</h2>
+                    <p>Taking initiative in projects and constantly seeking opportunities for improvement and
+                        innovation.</p>
+                    <img src="../project/images/logos/value-proactivity-s.webp" alt="Proactivity">
+                </div>
+                <div class="value-item">
+                    <h2>Communication</h2>
+                    <p>Listening actively to team members and clients, and articulating ideas clearly and effectively.
+                    </p>
+                    <img src="../project/images/logos/value-communication-s.webp" alt="Communication">
+                </div>
+                <div class="value-item">
+                    <h2>Perseverance</h2>
+                    <p>Continuously striving to overcome challenges and persisting in the face of difficulties until
+                        goals are achieved.</p>
+                    <img src="../project/images/logos/value-perseverance-s.webp" alt="Perseverance">
+                </div>
+                <div class="value-item">
+                    <h2>Courage</h2>
+                    <p>Boldly tackling complex problems and making decisions that align with ethical and professional
+                        standards.</p>
+                    <img src="../project/images/logos/value-courage-s.webp" alt="Courage">
+                </div>
+            </div>
+        </section>
+
+        <div class="invitation-box">
+            <p>
+                Let us bring your vision to life. Contact me today and
+                let us make it happen!
+            </p>
+            <div class="button-contact">
+                <a class="contact" href="../project/contact.html">Contact Us</a>
             </div>
         </div>
-    </footer>
-    
-    <script type="text/javascript" async id="calories-burned-calculator" data-type="verywell-tool"
-        data-vertical="verywellfit"
-        src="https://www.verywellfit.com/static/5.99.0/components/tools/calculators/iframe-embed/embed.min.js?id=calories-burned-calculator"></script>
+    </main>
 
+    <footer>
+        <p>&copy;<span id="currentyear">2026</span> - Tasha Vidal - Peru</p>
+        <p id="lastModified">Whereas ipsum dolor, sit amet consectetur</p>
+        <div class="social"></div>
+    </footer>
+
+    <script src="../project/scripts/base.js" defer></script>
+    <script src="../project/scripts/home.js" defer></script>
 </body>
 
 </html>
