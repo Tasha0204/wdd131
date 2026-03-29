@@ -1,79 +1,49 @@
 :root {
-    /* CSS HEX */
-    --oxford-blue: #0a1128ff;
-    --penn-blue: #001f54ff;
-    --indigo-dye: #034078ff;
-    --cerulean: #1282a2ff;
-    --white: #fefcfbff;
+  
+    --color-primary: #0a1128;
+    --color-secondary: #001f54;
+    --color-accent: #034078;
+    --color-light: #1282a2;
+    --color-bg: #fefcfb;
 
-    --barlow-regular-font-family: "Barlow", sans-serif;
-    --lato-regular-font-family: "Lato", sans-serif;
+    /* Fuentes A&S */
+    --font-main: "Lato", sans-serif;
+    --font-alt: "Barlow", sans-serif;
 }
 
+
 body {
-    /* Cambiado a Lato para que coincida con su plan */
-    font-family: var(--lato-regular-font-family);
+    font-family: var(--font-main);
     display: grid;
     place-items: center;
-    background-color: var(--white);
-    color: var(--oxford-blue);
+    background-color: var(--color-bg);
+    color: var(--color-primary);
     padding: 20px;
 }
 
 h2 {
-    color: var(--penn-blue);
-    border-bottom: 2px solid var(--cerulean);
+    color: var(--color-secondary);
+    border-bottom: 2px solid var(--color-light);
     width: 100%;
-    margin-top: 30px;
 }
 
 p {
-    color: var(--oxford-blue);
-    line-height: 1.6;
+    color: var(--color-primary);
 }
 
-/* Estilos para los ejemplos visuales */
-.titleEx,
-.paragraphEx {
-    font-family: var(--lato-regular-font-family);
-    color: #2e7d32; /* Un verde más profesional */
-    font-weight: bold;
-    font-size: 18px;
-}
-
-.headfoot {
-    font-family: var(--barlow-regular-font-family);
-    color: #2e7d32;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.headerEx,
-.footerEx {
+.headerEx, .footerEx {
+    background-color: var(--color-secondary);
+    color: var(--color-bg);
     width: 300px;
     padding: 15px;
-    background-color: var(--penn-blue);
-    color: var(--white);
     text-align: center;
-    margin: 10px 0;
-    border-radius: 5px;
 }
 
 .bodyEx {
+    background-color: var(--color-bg);
+    color: var(--color-accent);
+    border: 1px solid var(--color-accent);
     width: 300px;
     padding: 15px;
-    background-color: var(--white);
-    color: var(--indigo-dye);
     text-align: center;
-    border: 1px solid var(--indigo-dye);
-    margin: 10px 0;
-    border-radius: 5px;
-}
-
-/* Ajuste de imágenes para que no se vean chiquititas */
-img {
-    max-width: 100%;
-    height: auto;
-    border: 1px solid #ccc;
-    margin-top: 10px;
 }
