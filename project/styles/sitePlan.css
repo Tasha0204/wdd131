@@ -7,57 +7,73 @@
     --white: #fefcfbff;
 
     --barlow-regular-font-family: "Barlow", sans-serif;
-    --barlow-regular-font-weight: 400;
-    --barlow-regular-font-style: normal;
-
     --lato-regular-font-family: "Lato", sans-serif;
-    --lato-regular-font-weight: 400;
-    --lato-regular-font-style: normal;
-
-
 }
 
 body {
-    font-family: 'Times New Roman', Times, serif;
+    /* Cambiado a Lato para que coincida con su plan */
+    font-family: var(--lato-regular-font-family);
     display: grid;
     place-items: center;
-
+    background-color: var(--white);
+    color: var(--oxford-blue);
+    padding: 20px;
 }
 
 h2 {
     color: var(--penn-blue);
+    border-bottom: 2px solid var(--cerulean);
+    width: 100%;
+    margin-top: 30px;
 }
 
 p {
     color: var(--oxford-blue);
+    line-height: 1.6;
 }
 
-
+/* Estilos para los ejemplos visuales */
 .titleEx,
 .paragraphEx {
     font-family: var(--lato-regular-font-family);
-    color: green;
+    color: #2e7d32; /* Un verde más profesional */
     font-weight: bold;
     font-size: 18px;
 }
 
 .headfoot {
     font-family: var(--barlow-regular-font-family);
-    color: green;
+    color: #2e7d32;
     font-size: 18px;
     font-weight: bold;
 }
 
-
 .headerEx,
 .footerEx {
-    width: 200px;
-    height: 30px;
-    background-color: var(--indigo-dye);
+    width: 300px;
+    padding: 15px;
+    background-color: var(--penn-blue);
     color: var(--white);
     text-align: center;
+    margin: 10px 0;
+    border-radius: 5px;
 }
 
+.bodyEx {
+    width: 300px;
+    padding: 15px;
+    background-color: var(--white);
+    color: var(--indigo-dye);
+    text-align: center;
+    border: 1px solid var(--indigo-dye);
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+/* Ajuste de imágenes para que no se vean chiquititas */
 img {
-    width: 25%;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    margin-top: 10px;
 }
