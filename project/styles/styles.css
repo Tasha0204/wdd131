@@ -1,0 +1,64 @@
+/* CSS NIVEL POLLITO - DIRECTO Y SIN ERRORES */
+
+body {
+    font-family: "Lato", sans-serif;
+    display: grid;
+    place-items: center;
+    background-color: #fefcfb; /* El blanco de A&S */
+    color: #0a1128;            /* El azul Oxford */
+    padding: 20px;
+}
+
+h2 {
+    color: #001f54;            /* El azul Penn */
+    border-bottom: 2px solid #1282a2; /* El azul Cerulean */
+    width: 100%;
+    margin-top: 30px;
+}
+
+p {
+    color: #0a1128;
+    line-height: 1.6;
+}
+
+.titleEx, .paragraphEx {
+    font-family: "Lato", sans-serif;
+    color: #2e7d32; 
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.headfoot {
+    font-family: "Barlow", sans-serif;
+    color: #2e7d32;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.headerEx, .footerEx {
+    width: 300px;
+    padding: 15px;
+    background-color: #001f54; /* Azul Penn */
+    color: #fefcfb;            /* Blanco */
+    text-align: center;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.bodyEx {
+    width: 300px;
+    padding: 15px;
+    background-color: #fefcfb;
+    color: #034078;            /* Azul Indigo */
+    text-align: center;
+    border: 1px solid #034078;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}
