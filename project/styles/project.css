@@ -1,48 +1,45 @@
-.container-project-box {
+
+.portfolio-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-    grid-gap: 20px;
-    place-items: center;
-    margin: 5px 20px;
-}
-
-.project-card {
-    max-width: 300px;
-    height: 450px;
-    background-color: var(--accent3-color-Platinum);
-    border: 1px solid #778DA9;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px #0d1b2ac2;
-    margin-bottom: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.project-card img {
+.portfolio-items {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-items:hover {
+    transform: translateY(-5px); 
+}
+
+.project-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+.picturediv img {
     width: 100%;
-    border-radius: 5px;
     height: auto;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    margin-bottom: 15px;
 }
 
-.project-info {
+.project-desc {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #555;
     margin-top: 10px;
-}
-
-.project-info h2 {
-    font-size: 16px;
-    color: var(--secondary-color-Oxford-Blue);
-}
-
-.project-info p {
-    font-size: 12px;
-    color: var(--accent1-color-YInMn-Blue);
-    padding: 5px;
-}
-
-.project-info strong {
-    color: var(--headline-color-on-white);
-}
-
-.logos img {
-    height: 30px;
-    width: auto;
 }

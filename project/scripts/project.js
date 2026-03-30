@@ -1,33 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const projects = [
-        {
-            projectName: "WebPage Temple",
-            imageUrl: "../project/images/temple-project.png",
-            width: "893px",
-            height: "784px",
-            htmlLogo: "../project/images/logos/html-logo-s.png",
-            altHtml: "HTML5 Logo",
-            cssLogo: "../project/images/logos/css-logo-s.png",
-            altCss: "CSS Logo",
-            jsLogo: "../project/images/logos/javaScript-logo-s.png",
-            altJs: "JavaScript Logo",
-            projectDescription: "This webpage features an interactive section to filter and display information about various LDS temples around the world, with a responsive hamburger menu for easy navigation. Users can view details such as temple names, locations, dedication dates, and areas, complemented by images."
-        },
-        {
-            projectName: "WebPage Places",
-            imageUrl: "../project/images/place-project.png",
-            width: "765px",
-            height: "601px",
-            htmlLogo: "../project/images/logos/html-logo-s.png",
-            altHtml: "HTML5 Logo",
-            cssLogo: "../project/images/logos/css-logo-s.png",
-            altCss: "CSS Logo",
-            jsLogo: "../project/images/logos/javaScript-logo-s.png",
-            altJs: "JavaScript Logo",
-            projectDescription: "This section dynamically calculates and displays the wind chill factor based on static temperature and wind speed values. It enhances the weather information table, providing accurate and relevant details for the user's convenience."
-        }
-    ];
-
     const container = document.querySelector('.container-project-box');
 
     projects.forEach(project => {
@@ -74,4 +45,19 @@ document.addEventListener('DOMContentLoaded', function () {
         projectCard.appendChild(projectInfo);
         container.appendChild(projectCard);
     });
+const signupForm = document.getElementById('signup-form');
+
+if (signupForm) {
+    signupForm.addEventListener('submit', (e) => {
+        const pass = document.getElementById('password').value;
+        const confirmPass = document.getElementById('confirm-password').value;
+
+        if (pass !== confirmPass) {
+            e.preventDefault(); // Evita que se envíe el formulario
+            alert("Passwords do not match!");
+        } else {
+            alert("Form submitted successfully!");
+        }
+    });
+}
 });

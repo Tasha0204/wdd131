@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    const aboutMyself = document.querySelector('.about-myself');
-    if (aboutMyself) {
+    const MISSION = document.querySelector('.mission-myself');
+    if (MISSION) {
         const aboutMyselfContent = `
             <h2>I transform your vision into a high-impact digital platform.</h2>
             <p>
@@ -15,11 +15,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 to your community and enhance your brand's professionalism. 
             </p>
         `;
-        aboutMyself.innerHTML = aboutMyselfContent;
+        MISSION.innerHTML = aboutMyselfContent;
     }
 
-    const education = document.querySelector('.education');
-    if (education) {
+    const vision = document.querySelector('.vision');
+    if (vision) {
         const educationContent = `
             <h2>Build the technical foundation your brand needs to take off.</h2>
             <p>
@@ -30,6 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 identity and a system that works from day one. 
             </p>
         `;
-        education.innerHTML = educationContent;
+        vision.innerHTML = educationContent;
     }
 });

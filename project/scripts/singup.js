@@ -31,4 +31,34 @@ document.addEventListener('DOMContentLoaded', () => {
     if (modifiedElement) {
         modifiedElement.textContent = `Last Modified: ${document.lastModified}`;
     }
+    const signupForm = document.querySelector('form[action*="register"]'); 
+    if (signupForm) {
+        signupForm.addEventListener("submit", (e) => {
+            const password = document.getElementById("pass");
+            const confirmPassword = document.getElementById("pass-confirm");
+
+            if (password.value !== confirmPassword.value) {
+                e.preventDefault();
+                alert("Las contraseñas no coinciden. Por favor, verifica.");
+                confirmPassword.style.border = "2px solid #ff4d4d";
+                confirmPassword.focus();
+            }
+        });
+    }
+    const loginForm = document.querySelector('form[action*="login"]');
+    if (loginForm) {
+        loginForm.addEventListener("submit", (e) => {
+            const email = document.getElementById("mail").value;
+            if (email === "") {
+                e.preventDefault();
+                alert("Por favor, ingresa tu correo electrónico.");
+            }
+        });
+    }
+    const inputs = document.querySelectorAll("input");
+    inputs.forEach(input => {
+        input.addEventListener("input", () => {
+            input.style.border = "1px solid #ddd";
+        });
+    });
 });

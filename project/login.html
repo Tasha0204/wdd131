@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Tasha Vidal</title>
+    <link rel="stylesheet" href="../project/styles/style.css">
+    <link rel="stylesheet" href="../project/styles/style-large.css">
+    <link rel="stylesheet" href="../project/styles/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Barlow:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.png" alt="Logo Tasha Vidal" width="250">
+        <button id="menu"></button>
+        <nav class="navigation">
+             <a  href="../project/index.html">Home</a>
+            <a  href="../project/about.html">About</a>
+            <a href="../project/projects.html">Projects</a>
+            <a href="../project/contact.html">Contact</a>
+             <a href="../project/singup.html">Signup</a>
+        </nav>
+    </header>
+
+    <main class="container-contact">
+        <section class="contact-box">
+            <div class="image-container">
+                <img src="images/contac.jpg" alt="Login access image">
+            </div>
+            
+            <div class="form-container">
+                <form action="../project/login-handler" method="post">
+                    <h1>Login</h1>
+                    <p class="form-subtitle">Welcome back! Please enter your details.</p>
+                    <ul>
+                        <li>
+                            <label for="mail">Email:</label>
+                            <input type="email" id="mail" name="user_email" placeholder="example@mail.com" required>
+                        </li>
+                        <li>
+                            <label for="pass">Password:</label>
+                            <input type="password" id="pass" name="user_password" required>
+                        </li>
+                        <li>
+                            <button type="submit">Login</button>
+                        </li>
+                    </ul>
+                    <div class="form-footer">
+                        <p>Don't have an account? <a href="singup.html">Sign up here</a></p>
+                    </div>
+                </form>
+            </div>
+
+            <div class="final-contact">
+                <h3>Access your dashboard</h3>
+                <p>Manage your projects and connect with our development tools.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear">2026</span> - Tasha vidal - Peru</p>
+        <p id="lastModified">Last Modified: </p>
+        <div class="social">
+            <a href="https://github.com/tasha0204" target="_blank" title="GitHub">
+                <img class="icon github-logo" src="../project/images/logos/github-mark-white.png" alt="GitHub icon">
+            </a>
+            <a href="https://x.com/tasha_vidal" target="_blank" title="X">
+                <img class="icon x-logo" src="../project/images/logos/logo-x-version-white.png" alt="X logo">
+            </a>
+            <a href="https://www.linkedin.com/in/tasha-vidal" target="_blank" title="LinkedIn">
+                <img class="icon linkedin-logo" src="../project/images/logos/linkedin-logo-white.png" alt="LinkedIn icon">
+            </a>
+        </div>
+    </footer>
+    <script src="../project/scripts/singup.js" defer></script>
+</body>
+
+</html>
