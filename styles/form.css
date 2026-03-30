@@ -18,7 +18,7 @@
 
 body {
     font-family: var(--font-family);
-    background-color: var(--accent3-color-platinum);
+    background-color: var(--bg-page, var(--accent3-color-platinum));
     color: var(--primary-color-rich-black);
     padding: 20px;
 }
@@ -103,11 +103,12 @@ input[type="submit"]:hover {
     background-color: var(--accent1-color-yinmn-blue);
 }
 
+
 .rating-box .clasificacion {
-    direction: rtl;
-    unicode-bidi: bidi-override;
+    display: flex;
+    flex-direction: row-reverse; 
+    justify-content: center;
     font-size: 2.5rem;
-    text-align: center;
 }
 
 .rating-box input[type="radio"] {
@@ -118,7 +119,9 @@ input[type="submit"]:hover {
     display: inline-block;
     color: #ccc;
     cursor: pointer;
+    margin: 0 5px;
 }
+
 
 .rating-box label:hover,
 .rating-box label:hover ~ label,
