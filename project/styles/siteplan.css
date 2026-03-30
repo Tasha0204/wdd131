@@ -3,12 +3,12 @@ body {
     display: grid;
     place-items: center;
     background-color: #fefcfb; 
-    color: #0a1128;            
+    color: #0a1128;           
     padding: 20px;
 }
 
 h2 {
-    color: #001f54;           
+    color: #001f54;         
     border-bottom: 2px solid #1282a2; 
     width: 100%;
     margin-top: 30px;
@@ -19,16 +19,17 @@ p {
     line-height: 1.6;
 }
 
+
 .titleEx, .paragraphEx {
     font-family: "Lato", sans-serif;
-    color: #2e7d32; 
+    color: #001f54;           
     font-weight: bold;
     font-size: 18px;
 }
 
 .headfoot {
     font-family: "Barlow", sans-serif;
-    color: #2e7d32;
+    color: #034078;           
     font-size: 18px;
     font-weight: bold;
 }
@@ -37,7 +38,7 @@ p {
     width: 300px;
     padding: 15px;
     background-color: #001f54; 
-    color: #fefcfb;            
+    color: #fefcfb;           
     text-align: center;
     margin: 10px 0;
     border-radius: 5px;
@@ -47,9 +48,9 @@ p {
     width: 300px;
     padding: 15px;
     background-color: #fefcfb;
-    color: #034078;            
+    color: #034078;            /* Texto Azul Indigo */
     text-align: center;
-    border: 1px solid #034078;
+    border: 2px solid #1282a2; /* Borde Azul Cerúleo */
     margin: 10px 0;
     border-radius: 5px;
 }
@@ -59,4 +60,5 @@ img {
     height: auto;
     border: 1px solid #ccc;
     margin-top: 10px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
 }
