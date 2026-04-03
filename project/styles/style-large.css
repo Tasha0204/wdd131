@@ -1,4 +1,4 @@
-/* Larger Views ******************************/
+
 @media (min-width: 750px) {
     header {
         display: grid;
@@ -21,7 +21,7 @@
 
     #menu {
         display: none;
-        /* Hide hamburger button */
+      
     }
 
     main {

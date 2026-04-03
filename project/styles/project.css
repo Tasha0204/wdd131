@@ -5,6 +5,7 @@
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto; 
+}
 
 .project-card {
     background-color: white;
@@ -35,7 +36,6 @@
     margin-bottom: 15px;
 }
 
-/* La descripción */
 .project-desc {
     font-size: 0.9rem;
     line-height: 1.4;
