@@ -1,38 +1,40 @@
 
 const projects = [
-    {
-        title: "Portfolio 1: Place page",
-        image: "images/portfolio-1-small.webp",
-        desc: "This website portfolio uses picture and srcset in order to load different picture sizes. The site is about my dream destination, Banaue Rice Terraces in the Philippines!",
-        link: "https://tasha0204.github.io/wdd131/place.html"
-    },
-    {
-        title: "Portfolio 2: WDD131 home page",
-        image: "images/project-images/portfolio-2.webp",
-        desc: "This is a simple HTML personal homepage I've created for my course Dynamic Web Fundamentals (WDD131) in BYU-Idaho Spring Semester 2024.",
+     {
+        title: "project 1: Home Page",
+        image: "images/portafolio2.png",
+        desc: "This is a simple HTML personal homepage I've created for my course Dynamic Web Fundamentals (WDD131) in BYU-Idaho.",
         link: "https://tasha0204.github.io/wdd131/index.html"
     },
-    {
-        title: "Portfolio 3: Filtered temples page",
-        image: "images/project-images/portfolio-3.webp",
-        desc: "This website portfolio uses filtering of array objects in JavaScript.",
-        link: "https://tasha0204.github.io/wdd131/filtered-temples.html"
-    },
-    {
-        title: "Portfolio 4: Unfiltered temples page",
-        image: "images/project-images/portfolio-4.webp",
+     {
+        title: "project 2: Picture Album",
+        image: "images/portafolio4.png",
         desc: "This website portfolio is the beta version of the Filtered Temples page.",
         link: "https://tasha0204.github.io/wdd131/temples.html"
     },
     {
-        title: "Portfolio 5: Holy grail layout (practice)",
-        image: "images/project-images/portfolio-5.webp",
-        desc: "This is only a practice website to create my first holy grail layout in HTML.",
-        link: "https://tasha0204.github.io/wdd131/csspractice/holy-grail-layout-flex.html"
+        title: "project 3: Country Page",
+        image: "images/portafolio1.png",
+        desc: "This is a project from Lima, Peru, that shows a panoramic view of the Costa Verde along with key statistical data and the current weather conditions.",
+        link: "https://tasha0204.github.io/wdd131/place.html"
     },
+   
     {
-        title: "Portfolio 6: Whitewater rafting site (WDD130)",
-        image: "images/project-images/portfolio-6.webp",
+        title: "project 4: Picture Album Enhancement",
+        image: "images/portafolio3.png",
+        desc: "This is a project for a dynamic gallery of southern temples with filtering options by age and size, displaying architectural data and locations.",
+        link: "https://tasha0204.github.io/wdd131/filtered-temples.html"
+    },
+ {
+        title: "project 5: Product Review",
+        image: "images/portafolio6.png",
+        desc: "This is a rating form.",
+        link: "https://tasha0204.github.io/wdd131/form.html"
+    },
+  
+    {
+        title: "project 6: Whitewater rafting site (WDD130)",
+        image: "images/portafolio5.png",
         desc: "This website portfolio is my project in Web Fundamentals (WDD130).",
         link: "https://tasha0204.github.io/wdd130/wwr/index.html"
     }
